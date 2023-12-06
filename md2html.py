@@ -6,7 +6,7 @@ import os
 def md2html(mdfile, htmlfile):
     with open(mdfile, "r") as mdfile:
         text = mdfile.read()
-        html = markdown.markdown(text)
+        html = markdown.markdown(text, extensions=['tables'])
         with open(htmlfile, "w") as htmlfile:
             htmlfile.write('<head><meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"></head>\n')
             htmlfile.write('<link rel="stylesheet" href="https://stackedit.io/style.css" />\n')
